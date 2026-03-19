@@ -1,0 +1,22 @@
+# ==============================================================
+# .gitignore — Bảo vệ thông tin nhạy cảm khỏi bị commit lên Git
+# ==============================================================
+
+# Terraform state files (được quản lý bởi HCP Terraform)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# File override (local only)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash log
+crash.log
+
+# ⚠️  terraform.tfvars chứa thông tin cấu hình — OK để commit
+# Nếu bạn lỡ đặt secret vào đây thì thêm dòng dưới:
+# terraform.tfvars
