@@ -70,7 +70,7 @@ resource "proxmox_virtual_environment_vm" "db_server" {
 # ==============================================================
 resource "null_resource" "wait_for_cloudinit" {
   triggers = {
-    vm_id = proxmox_virtual_environment_vm.db_server.id
+    vm_id = proxmox_virtual_environment_vm.db_server[count.index].id
   }
 
   connection {
