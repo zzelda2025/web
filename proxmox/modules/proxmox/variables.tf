@@ -80,7 +80,7 @@ variable "wg_ec2_endpoint" {
 }
 
 variable "destroy" {
-  description = "destroy VM"
+  description = "destroy VM1"
   type        = number
   default     = 0
 }
