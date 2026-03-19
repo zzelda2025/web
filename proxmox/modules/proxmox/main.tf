@@ -16,6 +16,7 @@ resource "proxmox_virtual_environment_vm" "db_server" {
   name      = var.vm_name
   node_name = var.node_name
   vm_id     = var.vm_id
+  count     = 0
 
   clone {
     vm_id   = var.template_vm_id
