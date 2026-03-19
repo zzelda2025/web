@@ -78,3 +78,9 @@ variable "wg_ec2_endpoint" {
   type        = string
   default     = ""
 }
+
+variable "destroy" {
+  description = "destroy VM"
+  type        = number
+  default     = 0
+}
